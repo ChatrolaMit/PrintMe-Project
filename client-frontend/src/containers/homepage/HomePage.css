@@ -1,0 +1,22 @@
+.homepageContainer{
+    display: flex;
+
+}
+
+
+
+.elementContainer{
+    position: relative;
+    background-color: aqua;
+    height: 100%;
+}
+
+.element {
+    /* bottom: -10px; */
+    background-color: rgb(55, 150, 38);
+    position: fixed;
+    height: 100%;
+    left: 200px;
+    right: 0px;
+}
+

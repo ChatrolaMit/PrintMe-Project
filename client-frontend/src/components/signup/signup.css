@@ -1,0 +1,45 @@
+.signupContainer {
+    display: flex;
+    justify-content: center;
+    margin-top:70px;
+}
+
+.signupHeading{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(59, 63, 63);
+}
+
+
+.signupInputContainer{
+    margin-top: 30px;
+    display:flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+    gap: 25px;
+}
+
+.signupInput{
+    display: block;
+    width: 300px;
+    padding: 7px;
+    font-size: 14px;
+}
+
+.signupSubmit {
+    width:130px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px;
+    cursor: pointer;
+
+}
+
+.signupSubmit:hover {
+    background-color: rgb(130, 130, 130);
+}
+
+
