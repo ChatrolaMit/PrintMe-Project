@@ -2,18 +2,24 @@ const path = require('path')
 const express = require('express')
 const cors = require('cors')
 const morgan = require('morgan')
+const { mongoConnect } = require('./services/mongo.connect')
+const api = require('./routes/api')
 
 const app = express()
 
 app.use(cors({
-    origin:'http://localhost:4444'
+    origin:'http://localhost:5555'
 }))
 
-app.use(morgan('combined'))
+// app.use(express.static('public'))
+app.use(morgan('tiny'))
 app.use(express.json())
 
-app.get('*/',(req,res)=>{
-    res.send("Server is Running...")
+app.use('/api',api)
+
+app.get('/',(req,res)=>{
+    
+    res.send("Server is Now Running....")
 })
 
 module.exports = app ;

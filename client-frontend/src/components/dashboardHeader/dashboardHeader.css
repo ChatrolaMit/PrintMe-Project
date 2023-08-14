@@ -5,7 +5,17 @@
     width: 100%;
     align-items: center;
     height: 50px;
+    padding:0px 20px 0px 20px;
 }
+
+.searchBoxContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+}
+
+
 
 
 

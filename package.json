@@ -3,6 +3,6 @@
     "morgan":"^1.10.0"
   },
   "scripts": {
-    "start": "npm start --prefix client"
+    "start": "npm start --prefix client-frontend"
   }
 }
