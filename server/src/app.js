@@ -8,7 +8,7 @@ const api = require('./routes/api')
 const app = express()
 
 app.use(cors({
-    origin:'http://localhost:5555'
+    origin:'http://localhost:3000'
 }))
 
 // app.use(express.static('public'))

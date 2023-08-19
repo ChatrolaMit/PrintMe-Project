@@ -13,7 +13,6 @@ const Nav = () => {
                 <li><Link to='/test'>Test</Link></li>
                 <li><Link to='/setup'>Price Setup</Link></li>
             </ul>
-
         </div>
     )
 }

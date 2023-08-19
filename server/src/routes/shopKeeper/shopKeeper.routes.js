@@ -1,10 +1,12 @@
 const express = require('express')
 
-const { httpAddNewShopKeeper } = require('./shopkeeper.controller')
+const { httpShopKeeperLogin,httpGetShopKeeper,httpAddNewShopKeeper } = require('./shopkeeper.controller')
 
 const shopKeeper = express.Router()
 
-shopKeeper.post('/addshopkeeper', httpAddNewShopKeeper);
+shopKeeper.get('/' , httpGetShopKeeper)
+shopKeeper.post('/register', httpAddNewShopKeeper);
+shopKeeper.post('/login', httpShopKeeperLogin);
 
 module.exports = {
     shopKeeper

@@ -1,11 +1,6 @@
 const mongoose = require("mongoose")
 
 const shopKeeper = new mongoose.Schema({
-    aadharNumber:{
-        type:String,
-        require:true,
-        unique:true
-    },
     firstName:{
         type:String,
         required:true,
@@ -17,16 +12,31 @@ const shopKeeper = new mongoose.Schema({
         type:String,
         required:true
     },
+    shopName:{
+        type:String,
+        required:true
+    },
+    shopRegistrationNumber:{
+        type:String,
+        required:true
+    },
+    aadharNumber:{
+        type:String,
+        require:true         
+    },
     location:{
         type:String,
         required:true
     },
-    contactNumber:{
+    cordinates:{
+        type:String
+    },
+    email:{
         type:String,
         required:true
     },
-    emailId:{
-        type:String,
+    contactNumber:{
+        type:Number,
         required:true
     },
     password:{
