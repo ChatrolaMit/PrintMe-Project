@@ -1,27 +1,25 @@
 import React, { useState } from 'react'
-import { signInWithEmailAndPassword } from 'firebase/auth'
-import auth from '../../services/firebase'
 import './signin.css'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 
 const Signin = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const submitEvent = (e) => {
         // console.log()
-        e.preventDefault()
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                console.log(userCredential.user.email)
-                localStorage.setItem('user', JSON.stringify(userCredential.user.email))
-                navigate('/')
-            })
-            .catch((error) => {
-                console.log(error)
-            })
+        // e.preventDefault()
+        // signInWithEmailAndPassword(auth, email, password)
+        //     .then((userCredential) => {
+        //         console.log(userCredential.user.email)
+        //         localStorage.setItem('user', JSON.stringify(userCredential.user.email))
+        //         navigate('/')
+        //     })
+        //     .catch((error) => {
+        //         console.log(error)
+        //     })
     }
 
     return (

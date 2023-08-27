@@ -5,10 +5,7 @@ const {getShopKeeper,createShopKeeper,getShopKeeperWithPassword} = require('../.
 
 const httpAddNewShopKeeper = async(req,res) =>{
     let data = req.body
-    // console.log(data)
-    if(data.aadharNumber.length!=12){
-        return res.send({result:"invalid aadharNumber"});
-    }
+    
     
     bcrypt.hash(data.password , saltRound, async(err,hash)=>{
         if(err){

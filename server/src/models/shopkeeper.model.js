@@ -4,7 +4,10 @@ const shopkeeper = require('./shopkeeper.mongo')
 const createShopKeeper = async (user) => {
   try {
       if (await isUserExist(user.email)) {
-          return { result: `${user.email} is already exist!` };
+          return { 
+            result: false,
+            alreadyExist:true
+          };
       }
 
       let result;
@@ -16,8 +19,7 @@ const createShopKeeper = async (user) => {
           );
       } catch (error) {
           console.error('Update error:', error);
-      }
-
+      } 
       if (result) {
           try {
               const shop = await getShopKeeper(result.upsertedId);
@@ -31,6 +33,7 @@ const createShopKeeper = async (user) => {
           } catch (err) {
               return {
                   result: false,
+                  alreadyExist:false
               };
           }
       }
